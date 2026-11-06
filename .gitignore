@@ -1,0 +1,58 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js frontend
+node_modules/
+dist/
+.next/
+coverage/
+
+# Test reports
+surefire-reports/
+failsafe-reports/
+
+# Docker local data
+docker-data/
+postgres-data/
+redis-data/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak

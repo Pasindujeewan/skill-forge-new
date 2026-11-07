@@ -72,6 +72,17 @@ SkillForge follows a microservices architecture where each service is responsibl
 | Payment Service | Payment processing |
 | Saga Orchestrator | Coordination of distributed transactions |
 
+### Auth API
+
+The auth service provides `POST /api/auth/register` and `POST /api/auth/login`.
+Both return an access token; pass it to protected endpoints as
+`Authorization: Bearer <accessToken>`. Registration accepts `email`, `password`,
+`firstName`, and `lastName`, stores the BCrypt password hash, and creates the
+matching profile by posting `authAccountId`, `email`, `firstName`, and `lastName`
+to `POST /api/users` on User Service. User Service can be configured with
+`USER_SERVICE_URL` (defaults to `http://user-service`). Set `JWT_SECRET` to a
+Base64-encoded secret containing at least 32 bytes.
+
 ## Project Structure
 
 ```text
